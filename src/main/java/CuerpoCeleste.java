@@ -1,4 +1,4 @@
-public class CuerpoCeleste {
+public abstract class CuerpoCeleste {
     private final String nombre;
     private final double diametro;
     private final double duracionDia;
@@ -8,6 +8,10 @@ public class CuerpoCeleste {
         this.diametro = diametro;
         this.duracionDia = duracionDia;
     }
+
+    public abstract String getDescripcion();
+
+    public abstract TipoPlaneta getTipoPlaneta();
 
     public String getNombre() {
         return nombre;
@@ -19,5 +23,14 @@ public class CuerpoCeleste {
 
     public double getDuracionDia() {
         return duracionDia;
+    }
+
+    @Override
+    public String toString() {
+        return "CuerpoCeleste{" +
+                "nombre='" + nombre + '\'' +
+                ", diametro=" + diametro +
+                ", duracionDia=" + duracionDia +
+                '}';
     }
 }
